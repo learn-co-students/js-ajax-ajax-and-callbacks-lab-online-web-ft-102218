@@ -60,15 +60,15 @@ describe('index.js', () => {
       })
     })
 
-    describe('showCommits', () => {
-      it('calls the github commits api and displays results', () => {
-        const el = { dataset: { repository: "repo", owner: "owner" } }
-        showCommits(el)
-        requests[0].respond(200, contentType, commitsData())
-        expect(requests[0].url).toMatch(/https:\/\/api.github.com\/repos\/owner\/repo\/commits/)
-        expect(window.$('#details').html()).toMatch(/6dcb09b5b57875f334f61aebed695e2e4193db5e/)
-      })
-    })
+    // describe('showCommits', () => {
+    //   it('calls the github commits api and displays results', () => {
+    //     const el = { dataset: { repository: "repo", owner: "owner" } }
+    //     showCommits(el)
+    //     requests[0].respond(200, contentType, commitsData())
+    //     expect(requests[0].url).toMatch(/https:\/\/api.github.com\/repos\/owner\/repo\/commits/)
+    //     expect(window.$('#details').html()).toMatch(/6dcb09b5b57875f334f61aebed695e2e4193db5e/)
+    //   })
+    // })
   })
 })
 
